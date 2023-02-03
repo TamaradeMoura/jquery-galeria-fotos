@@ -4,46 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jQuery</title>
+    <title>Lista_de_Tarefas</title>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <header>
-    <h1>Galeria de fotos</h1>
-    <button type="button">Nova Imagem +</button>
-    </header>
-    <form>
-        <h2>Inserir nova imagem</h2>
-        <input type="url" id="endereco-imagem-nova" required placeholder="URl da imagem" />
-        <button type="submit">Adicionar</button>
-        <button type="reset" id="botao-cancelar">Cancelar</button>
-    </form>
-    <ul>
-        <li>
-            <img src="/images/foto1.jpg" alt="pintura de um gato" />
-            <div class="overlay-imagem-link">
-                <a href="/images/foto1.jpg" target="_blank">
-                    Ver imagem em tamanho real
-                </a>
-            </div>
-        </li>
-        <li>
-            <img src="/images/foto2.jpg" alt="imagem de um flamingo" />
-            <div class="overlay-imagem-link">
-                <a href="/images/foto2.jpg" target="_blank">
-                    Ver imagem em tamanho real
-                </a>
-            </div>
-        </li>
-        <li>
-            <img src="/images/foto3.jpg" alt="foto de 2 cachorros" />
-            <div class="overlay-imagem-link">
-                <a href="/images/foto3.jpg" target="_blank">
-                    Ver imagem em tamanho real
-                </a>
-            </div>
-        </li>
-    </ul>
+    <div class="container">
+        <header>
+            <img src="./imagem/tarefa.png" alt="lista de tarefas">
+            <h1>Lista de Tarefas</h1>
+        </header>
+            <form id="lista-tarefas">
+                <input type="text" id="nome-tarefa" placeholder="Nova Tarefa">
+                <button type="submit">+ Nova Tarefa</button>
+            </form>
+            <ol>
+                <li class="item-completado"></li>
+            </ol>
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script src="main.js"></script>
 </body>

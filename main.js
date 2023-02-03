@@ -1,26 +1,14 @@
 $(document).ready(function(){
-    $('header button').click(function(){
-        $('form').slideDown();
-    })
-
-    $('#botao-cancelar').click(function(){
-        $('form').slideUp();
-    })
-
     $('form').on('submit', function(e){
         e.preventDefault();
-        const enderecoDaNovaImagem = $('#endereco-imagem-nova').val();
-        const novoItem = $('<li style="display: none"></li>');
-        $(`<img src = "${enderecoDaNovaImagem}" />`).appendTo(novoItem);
-        $(`
-            <div class="overlay-imagem-link">
-                <a href="${enderecoDaNovaImagem}" target="_blank" title="Ver imagem em tamanho real">
-                    ver imagem em tamanho real
-                </a>
-            </div>
-        `) .appendTo(novoItem);
-        $(novoItem).appendTo('ul');
+        const novaTarefa = $('#nome-tarefa').val();
+        const novoItem = $(`<li>${novaTarefa}</li>`);
+        (novoItem).appendTo('ol');
         $(novoItem).fadeIn();
-        $('#endereco-imagem-nova').val('')
-    })
-})
+        $('#nome-tarefa').val('');
+        
+        $('li').click(function(){
+            $(this).addClass('item-completado');
+        });
+    });
+});

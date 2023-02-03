@@ -1,87 +1,94 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Roboto, sans-serif;
+    font-family: 'Unbounded', cursive;
 }
 
-header{
-    background-color: #5f27cd;
-    padding: 16px 0;
-    color: #fff;
+body {
+    background-color: #eecda1;
+    padding-top: 250px;
+    margin-right: -500px;
+}
+
+header {
     display: flex;
-    border-bottom: 16px solid #341f97;
-    justify-content: center;
-    text-transform: uppercase;
-    font-style: italic;
+    align-items: center;
+    margin-bottom: 40px;
 }
 
-header button {
-    margin-left: 16px;
+header img{
+    height: 85px;
+    margin-right: 16px;
 }
 
-form{
-    background-color: #c8d6e5;
-    padding: 24px 0;
-    text-align: center;
-    display: none;
+header h1 {
+    font-size: 40px;
+    font-weight: bold;
 }
 
-form h2 {
-    margin-bottom: 16px;
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
 }
 
-input, button {
-    padding: 8px;
+form {
+    display: flex;
+    max-width: 640px;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 56px;
 }
 
-button {
-    background-color:  #009432;
+form input {
+    font-size: 24px;
+    background-color: #fff;
+    border: 2px solid black;
+    border-bottom: 2px solid #000;
+    border-radius: 4px;
+    margin-inline: 5px;
+}
+
+form button {
+    background-color: #f5d41c;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
     border: none;
     cursor: pointer;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #fff;
+    padding: 8px;
+    margin-inline: 5px;
 }
 
-#botao-cancelar {
-    background-color: red;
+form button {
+    transition: 0.2s;
 }
 
-ul {
-    display: flex;
-    flex-wrap: wrap;
+form button:hover {
+    background-color: #a3609a;
+    color: white;
 }
 
-ul li {
-    max-width: 25%;
-    list-style: none;
-    position: relative;
-    max-height: 280px;
-    overflow-y: hidden;
+.item-completado {
+    text-decoration:line-through;
+    cursor: pointer;
 }
 
-ul li img {
-    width: 100%;
+ol {
+    background: #f5d41c;
+    padding: 20px;
 }
 
-.overlay-imagem-link {
-    padding: 16px;
-    background-color: rgba(0,0,0,0.7);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    opacity: 0;
-    transition: all ease .5s;
+ol li {
+    background: #fff;
+    color: rgb(12, 12, 12);
+    margin: 5px;
 }
 
-.overlay-imagem-link a {
-    color: #fff;
-    text-decoration: none;
-}
-
-ul li:hover .overlay-imagem-link {
-    opacity: 1;
+ol {
+    list-style-type: none;
+    padding: 5px;
+    margin-right: 320px;
 }
 
